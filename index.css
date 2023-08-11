@@ -1,0 +1,196 @@
+:root {
+  --background: hsl(0, 0%, 98%);
+  --almostBlack: hsl(0, 0%, 8%);
+  --mediumGray: hsl(0, 0%, 41%);
+}
+
+body {
+  margin: auto;
+  width: 1440px;
+  font-family: 'Epilogue', sans-serif;
+  background-color: var(--background);
+}
+
+.show {display:block;}
+
+
+/** Dropdown Menus */
+.featuresBtn, .companyBtn {
+  background-color: var(--background);
+  color: var(--mediumGray);
+  border: none;
+  cursor: pointer;
+}
+
+.features, .company {
+  float: left;
+  overflow: hidden;
+}
+
+.features .featuresBtn, .company .companyBtn {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  background-color: inherit;
+  padding: 12px 16px;
+  margin: 0;
+  font-size: 16px;
+}
+
+.dropdownFeatures, .dropdownCompany {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 15px;
+  padding-right: 1px;
+  padding-left: 1px;
+}
+
+.dropdownFeatures {
+  left: 14%;
+}
+
+.dropdownFeatures a, .dropdownCompany a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdownFeatures img {
+  margin-right: 10px;
+}
+
+.features:hover .dropdownFeatures, .company:hover .dropdownCompany {
+  display: flex;
+  flex-direction: column;
+  color: var(--almostBlack);
+}
+
+/** End of Dropdown Menus */
+
+
+/** Start of Nav */
+.topNav {
+  overflow: hidden;
+  padding: 25px 50px;
+}
+
+.topNav a {
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 16px;
+  color: var(--mediumGray);
+  font-size: 15px;
+}
+
+.topNav a:hover {
+  cursor: pointer;
+  color: var(--almostBlack);
+}
+
+.topNavRight {
+  float: right;
+}
+
+.logo {
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  padding: 30px 15px;
+  height: 30px;
+}
+
+.company img{
+  margin-left: 10px;
+  
+}
+.features img{
+  margin-left: 10px;
+}
+
+.arrow {
+  /* Your existing styles for the arrow image */
+  transition: transform 0.5s ease; /* Add a smooth transition */
+}
+
+.arrowUp {
+  transform: rotate(180deg); /* Initially rotate it to hide the up arrow */
+}
+
+.features:hover .arrowUp {
+  transform: rotate(0deg); /* Rotate it back to show the up arrow */
+}
+
+.company:hover .arrowUp {
+  transform: rotate(0deg); /* Rotate it back to show the up arrow */
+}
+
+/** End of Nav */
+
+/** Left Side */
+.leftSide {
+  display: flexbox;
+  height: 350px;
+  padding: 98px 140px;
+}
+
+.title {
+  font-size: 75px;
+}
+
+.mainP {
+  font-size: 18px;
+  color: var(--mediumGray);
+  line-height: 28px;
+}
+
+.learnMoreBtn {
+  color: var(--background);
+  background-color: var(--almostBlack);
+  margin-top: 35px;
+  height: 55px;
+  width: 170px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid var(--almostBlack);
+  font-size: 22px;
+  transition: .5s ease background;
+}
+
+.learnMoreBtn:hover {
+  cursor: pointer;
+  background-color: var(--background);
+  color: var(--almostBlack);
+}
+
+.register {
+  background-color: var(--background);
+  height: 25px;
+  width: 85px;
+  border-radius: 15px;
+  outline: none;
+  border: 2px solid var(--mediumGray);
+  font-size: 16px;
+  margin-left: 25px;
+}
+
+.rightSideImg img{
+  max-width: 40%;
+  height: auto;
+  float: right;
+}
+
+.clientImg {
+  display: flex;
+  margin-top: 140px;
+}
+
+.clientImg img {
+  margin-right: 40px;
+}
